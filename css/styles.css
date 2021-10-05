@@ -146,7 +146,7 @@ header {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts {
@@ -176,7 +176,7 @@ header {
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-icon {
@@ -197,7 +197,7 @@ header {
 .contacts-link:hover .contacts-icon,
 .contacts-link:focus .contacts-icon {
   fill: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Герой */
@@ -251,7 +251,7 @@ header {
 .hero-button:hover,
 .hero-button:focus {
   background: var(--secondary-accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Общие свойства для секций */
 .section-title {
@@ -419,7 +419,7 @@ header {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -431,7 +431,7 @@ header {
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: var(--primary-white-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Постоянные клиенты */
@@ -469,13 +469,13 @@ header {
 .clients-link:hover,
 .clients-link:focus {
   border: 1px solid var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-logo,
 .clients-link:focus .clients-logo {
   fill: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Подвал */
@@ -574,7 +574,7 @@ header {
 .join-link:hover,
 .join-link:focus {
   background-color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-icon {
@@ -620,7 +620,9 @@ header {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .works-list {
@@ -639,16 +641,16 @@ header {
   background: var(--primary-background-color);
 }
 
-.work-item:hover,
-.work-item:focus {
+.work-link:hover,
+.work-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.work-item:hover .work-text,
-.work-item:focus .work-text {
+.work-link:hover .work-text,
+.work-link:focus .work-text {
   transform: translateY(0);
 }
 
@@ -732,18 +734,19 @@ header {
 
 .modal-button {
   position: absolute;
-  right: 0;
+  right: 8px;
+  top: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
-  margin-top: 8px;
   width: 30px;
   height: 30px;
 
   background-color: var(--primary-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  cursor: pointer;
 }
 
 .modal-icon {
